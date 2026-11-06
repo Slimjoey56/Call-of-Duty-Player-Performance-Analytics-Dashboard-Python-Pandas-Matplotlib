@@ -33,6 +33,12 @@ These ratios should be calculated only for records with valid nonzero denominato
 5. Compare metrics by country and weapon.
 6. Present results using Matplotlib.
 
+## Predictive modelling status
+
+The notebook's earlier `PerformanceTier` classifier has been removed. The tier was derived from `PerformanceScore`, which was itself calculated from the same record's K/D ratio and win rate. Predicting that derived label from overlapping match statistics creates a circular target and does not demonstrate genuine future-performance prediction. This repository is therefore presented as descriptive player analytics, not a validated predictive model.
+
+A future prediction version should use time-indexed match records, define a next-match outcome, and restrict predictors to information available before that match.
+
 ## Tools
 
 Python, Pandas, Matplotlib, and Jupyter Notebook.
